@@ -24,7 +24,11 @@ internal class CsprojPostprocessor : AssetPostprocessor
     private const string cscrspFileName = "csc.rsp";
 
     private static readonly Regex s_cscrspIncludePattern =
+#if UNITY_EDITOR_OSX    // MacOSの場合パスの指定が違う
+        new($@"<None Include=""(.*?)/{cscrspFileName}"" />", RegexOptions.Compiled);
+#else
         new($@"<None Include=""(.*?)\\{cscrspFileName}"" />", RegexOptions.Compiled);
+#endif
 
     private static readonly Regex s_langVersionPattern =
         new(@"<LangVersion>(.*?)</LangVersion>", RegexOptions.Compiled);
