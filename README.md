@@ -15,7 +15,7 @@ Unity 2022.3 or newer
 Add the following line to manifest.json
 
 ```json
-"com.github-troubear.bettersharpforunity": "https://github.com/troubear/BetterSharpForUnity.git?path=Packages/BetterSharpForUnity",
+"com.hyoga-fukuno.bettersharpforunity": "https://github.com/HyogaFukuno/BetterSharpForUnity.git?path=Packages/BetterSharpForUnity",
 ```
 
 Or, install from `Package Manager` -> `Add package from git URL...`
